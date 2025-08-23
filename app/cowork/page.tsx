@@ -17,23 +17,23 @@ export default function CoworkPage() {
     name.split(" ").map((n) => n[0]).join("");
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 bg-white">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 bg-white">
       {/* Back Arrow */}
       <Link href="/" className="inline-block mb-6 text-gray-600 hover:text-gray-800 text-2xl">
         ←
       </Link>
 
-      <h1 className="text-3xl font-bold mb-6">Cowork Dashboard</h1>
-      <p className="text-gray-600 mb-10">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4">Cowork Dashboard</h1>
+      <p className="text-gray-600 mb-8">
         Welcome to your collaborative workspace! Here you can see projects, team members, and tasks at a glance.
       </p>
 
       {/* Projects Section */}
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <div key={project.id} className="p-6 bg-white shadow rounded-lg border border-gray-200">
+            <div key={project.id} className="p-4 sm:p-6 bg-white shadow rounded-lg border border-gray-200">
               <h3 className="font-bold text-lg mb-2">{project.name}</h3>
               <span
                 className={`inline-block px-3 py-1 text-xs rounded-full ${
@@ -53,17 +53,17 @@ export default function CoworkPage() {
 
       {/* Team Members Section */}
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Team Members</h2>
-        <div className="flex space-x-6">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">Team Members</h2>
+        <div className="flex flex-col sm:flex-row sm:flex-wrap gap-6">
           {teamMembers.map((member) => (
             <div key={member.id} className="flex flex-col items-center">
               <div
-                className={`w-20 h-20 mb-2 flex items-center justify-center rounded-full text-white text-xl font-bold ${member.color}`}
+                className={`w-16 h-16 sm:w-20 sm:h-20 mb-2 flex items-center justify-center rounded-full text-white text-lg sm:text-xl font-bold ${member.color}`}
               >
                 {getInitials(member.name)}
               </div>
-              <p className="font-semibold">{member.name}</p>
-              <p className="text-gray-500 text-sm">{member.role}</p>
+              <p className="font-semibold text-center">{member.name}</p>
+              <p className="text-gray-500 text-sm text-center">{member.role}</p>
             </div>
           ))}
         </div>

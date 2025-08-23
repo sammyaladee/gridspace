@@ -14,23 +14,23 @@ export default function RapidRecruitPage() {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 bg-white">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-10 bg-white">
       {/* Back Arrow */}
       <Link href="/" className="inline-block mb-6 text-gray-600 hover:text-gray-800 text-2xl">
         ←
       </Link>
 
-      <h1 className="text-3xl font-bold mb-4">Rapid Recruit Dashboard</h1>
-      <p className="text-gray-600 mb-10">
+      <h1 className="text-2xl sm:text-3xl font-bold mb-4">Rapid Recruit Dashboard</h1>
+      <p className="text-gray-600 mb-8">
         Rapid Recruit helps you discover, connect, and hire the right talent in record time.
       </p>
 
       {/* Job Postings */}
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Job Postings</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">Job Postings</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {jobs.map((job) => (
-            <div key={job.id} className="p-6 bg-white shadow rounded-lg border border-gray-200">
+            <div key={job.id} className="p-4 sm:p-6 bg-white shadow rounded-lg border border-gray-200">
               <h3 className="font-bold text-lg mb-2">{job.title}</h3>
               <p className="text-gray-500 mb-2">{job.location}</p>
               <span
@@ -46,11 +46,11 @@ export default function RapidRecruitPage() {
       </section>
 
       {/* Candidates */}
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-4">Candidates</h2>
-        <div className="grid md:grid-cols-3 gap-6">
+      <section>
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">Candidates</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {candidates.map((cand) => (
-            <div key={cand.id} className="p-6 bg-white shadow rounded-lg border border-gray-200">
+            <div key={cand.id} className="p-4 sm:p-6 bg-white shadow rounded-lg border border-gray-200">
               <h3 className="font-bold text-lg mb-2">{cand.name}</h3>
               <p className="text-gray-500 mb-2">{cand.position}</p>
               <span

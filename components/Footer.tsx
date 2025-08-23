@@ -5,12 +5,12 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-6 px-8">
+    <footer className="bg-white py-6 px-4 sm:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Top Row: Logo + Links */}
-        <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
           {/* Logo */}
-          <div className="flex items-center gap-2 mb-4 md:mb-0">
+          <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center">
               <Image
                 src={logo}
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div className="flex flex-wrap justify-end space-x-6">
+          <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm">
             <Link href="#" className="text-gray-600 hover:text-gray-800">About</Link>
             <Link href="#" className="text-gray-600 hover:text-gray-800">Contact</Link>
             <Link href="#" className="text-gray-600 hover:text-gray-800">Terms</Link>
@@ -41,8 +41,8 @@ export default function Footer() {
         <div className="border-t border-gray-300 w-full" />
 
         {/* Bottom Row: Copyright + Privacy/Terms */}
-        <div className="flex flex-col md:flex-row justify-between items-center mt-4 mb-8">
-          <p className="text-xs font-bold text-black mb-2 md:mb-0">
+        <div className="flex flex-col md:flex-row justify-between items-center mt-4 gap-2 md:gap-0">
+          <p className="text-xs font-bold text-black text-center md:text-left">
             Copyright © 2025, GridSpace. All rights reserved.
           </p>
           <div className="flex space-x-4">
