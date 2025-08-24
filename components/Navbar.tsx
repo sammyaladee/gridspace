@@ -20,7 +20,7 @@ export default function Navbar() {
             alt="GridSpace logo"
             width={50}
             height={50}
-            className="object-cover relative -top-1 left-2 p-2"
+            className="object-cover relative bottom-0.5 sm:bottom-1 left-2 p-2"
           />
           <Image
             src={gridspace}
@@ -31,7 +31,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+        <nav className="hidden md:flex space-x-6 text-sm lg:pl-55 font-medium text-gray-600">
           <Link href="#">How it works</Link>
           <Link href="#">Host a Space</Link>
           <Link href="#">About</Link>
